@@ -82,3 +82,7 @@ target/
 #Ipython Notebook
 .ipynb_checkpoints
 settings.py
+
+# Editor temp files
+*~
+*.save
