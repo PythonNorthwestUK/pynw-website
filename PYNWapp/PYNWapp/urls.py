@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'', include('PYNWsite.urls'))
+    url(r'', include('PYNWsite.urls'),
+    url(r'event/([0-9])/', include('PYNWsite.urls'))
 ]
