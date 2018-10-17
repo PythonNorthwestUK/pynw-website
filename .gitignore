@@ -16,6 +16,7 @@ tests/report/
 credentials.py
 credentials.pyc
 settings_secret.py
+db.sqlite3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

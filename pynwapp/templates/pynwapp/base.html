@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block head_title %}Python North West{% endblock %}</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@pythonnw"/>
+    <meta name="twitter:title" content="Python North West"/>
+    <meta name="twitter:description" content="A usergroup for the Python programming language in Manchester, UK"/>
+    <meta name="twitter:image" content="{% static 'pynwapp/images/pynw-logo.png' %}"/>
+    <meta name="twitter:image:alt" content="Python North West logo"/>
+    <meta property="og:title" content="Python North West"/>
+    <meta property="og:description" content="A usergroup for the Python programming language in Manchester, UK"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="{% static 'pynwapp/images/pynw-logo.png' %}"/>
+    <meta property="og:image:alt" content="Python North West logo"/>
+    <link rel="stylesheet" href="{% static 'pynwapp/style.css' %}"/>
+    {# HTML5Shiv allowing styling of html5 elements in IE < 9 #}
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    {% block head %}
+    {% endblock head %}
+</head>
+<body {% block bodyattrs %}{% endblock %}>
+<div id="body-wrapper">
+    
+    <header>
+    {% comment %}
+    <nav>
+        <ul>
+            <li><a href="#">Foobars</a></li>
+            <li class="current"><a href="#">Other things</a></li>
+            <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
+    {% endcomment %}
+    {% block header %}
+        <a href="{% url 'index' %}" title="home" alt="home">
+            <image class="logo" src="{% static 'pynwapp/images/pynw-logo.png' %}" alt="Python North West" />
+        </a>
+        <h1>{% block title %}Python North West{% endblock %}</h1>        
+    {% endblock %}
+    </header>
+    <main>
+    {% block content %}
+    {% endblock %}
+    </main>
+    <footer>
+    {% block footer %}
+        <p><a href="https://www.meetup.com/Python-North-West-Meetup/" alt="PyNW on Meetup">
+             <img src="{% static 'pynwapp/images/meetup_s.png' %}" title="Meetup logo" class="icon"/></a>
+           <a href="https://twitter.com/pythonnw" alt="PyNW on Twitter">
+             <img src="{% static 'pynwapp/images/twitter_s.png' %}" title="Twitter logo" class="icon"/></a>
+           <a href="https://github.com/PythonNorthwestEngland" alt="PyNW on Github">
+             <img src="{% static 'pynwapp/images/github_s.png' %}" title="Github logo" class="icon"/></a>
+           <a href="https://groups.google.com/forum/#!forum/python-north-west" alt="PyNW mailing list">
+             <img src="{% static 'pynwapp/images/email_s.png' %}" title="Email icon" class="icon"/></a>
+           <a href="https://goo.gl/maps/L8NSGoGCBX32" alt="PyNW map">
+             <img src="{% static 'pynwapp/images/location_s.png' %}" title="Location icon" class="icon" /></a>
+           <a href="https://www.meetup.com/Python-North-West-Meetup/events/ical/" alt="PyNW calendar feed">
+             <img src="{% static 'pynwapp/images/calendar_s.png' %}" title="Calendar icon" class="icon"/></a></p>
+        <p>Copyright &copy; 2018 Python North West<br/>
+           Social media icons by 
+           <a href="https://www.iconfinder.com/popcornarts" title="PopcornArts">PopcornArts</a> and 
+           <a href="https://www.graphicsfuel.com" title="GraphicsFuel">GraphicsFuel</a></p>
+        {% comment %}
+        <p><a href="https://www.djangoproject.com" title="Django">
+           <img src="{% static 'pynwapp/images/django.gif' %}" alt="Made with Django" 
+              border="0"/></a></p>
+        {% endcomment %}
+    {% endblock %}
+    </footer>
+</div>
+</body>
+</html>

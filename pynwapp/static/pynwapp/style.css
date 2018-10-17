@@ -1,0 +1,248 @@
+@font-face
+{ font-family: 'sen'; src: url('fonts/sen-bold.woff'); 
+  font-weight: bold; font-style: normal; }
+
+@font-face
+{ font-family: 'hack'; src: url('fonts/hack.woff');
+  font-weight: normal; font-style: normal; }
+@font-face
+{ font-family: 'hack'; src: url('fonts/hack-bold.woff');
+  font-weight: bold; font-style: normal; }
+
+/* pre-html5 compatibility */
+header, section, footer, aside, nav, main, article, figure
+{ display: block; }
+
+html
+{}
+
+html,body 
+{ margin: 0; padding: 0; font-family: verdana,sans-serif; height: 100vh;
+  box-sizing: border-box; font-size: 12pt; 
+  background-color: green; color: black; }
+
+#body-wrapper
+{ /* sits at the root of the body, fits the size of the viewport and provides its own 
+     replacement scrollbar for the page content, allowing us to use the 'perspective' 
+     property for parallax */
+  overflow: hidden auto; overflow-x: hidden; height: 100vh; box-sizing: border-box; 
+  margin: 0; padding: 0; 
+}
+
+header
+{ transform-style: preserve-3d; }
+
+header a, header a:visited, footer a, footer a:visited
+{ text-decoration: underline; color: white; }
+
+header a:hover, header a:active, header a:focus, footer a:hover, footer a:active, footer a:focus
+{ position: inherit; color: lightgreen; }
+
+header nav
+{ display: block; background-color: rgb(0,64,0); margin: 0; padding: 0; font-size: 12pt; 
+  box-shadow: 0px 4px 12px 8px inset rgba(0,0,16,0.25); 
+  transform-style: preserve-3d; z-index: 1;
+  border-bottom: 4px solid green; }
+
+header nav a, nav a:visited, nav li.current a
+{ color: white; text-decoration: none; display: inline-block; margin: 0.2em 0px 0px 0px; 
+  padding: 0.8em 2em; vertical-align: bottom; position: relative; height: 1em; }
+
+header nav a:hover, header nav a:active, header nav a:focus
+{ color: yellow; margin-top: 0px; height: 1.2em; }
+
+header nav li a
+{ border-radius: 16px 16px 0px 0px; background-color: rgb(0,96,0); }
+
+header nav li.current a
+{ border-radius: 16px 16px 0px 0px; background-color: green; }
+
+header nav ul
+{ margin: 0; padding: 0; width: auto; text-align: center; }
+
+header nav ul li
+{ margin: 0; padding: 0; display: inline-block; }
+
+img.logo /* site logo */
+{ height: 64px; float: left; margin: 0 16px 0 0; vertical-align: middle; 
+  border: 4px solid white; }
+
+main
+{ margin: 0; background-color: white; transform: translateZ(0px); 
+  z-index: 0;
+  /* proportionally less side-padding at smaller resolution, with px default if calc isn't 
+     supported */
+  padding: 3% 16px; 
+  padding-left:  calc(25% - 140px); padding-right: calc(25% - 140px);
+  /* min content height just to make sure page is at least as tall as the window */
+  min-height: 100vh; }
+
+.reader-help
+{ display: block; position: absolute; top: -1000px; left: -1000px; 
+  background-color: white; padding: 1em; }
+
+.reader-help:focus
+{ top: 0px; left: 0px; }
+
+main nav
+{ display: block; padding: 0; margin: 0 0 16px 0; background-color: green; 
+  width: auto; border-radius: 32px 32px 4px 4px; font-size: 0pt; }
+
+main nav ul
+{ display: block; padding: 0; margin: 0 auto; text-align: center; }
+
+main nav li
+{ display: inline-block; padding: 0; margin: 0; }
+
+main nav li a, main nav li a:hover, main nav li a:focus, main nav li a:visited, main nav li a:active
+{ text-decoration: none; position: inherit; text-shadow: none; 
+  color: green; font-weight: bold; display: inline-block; padding: 0.5em; 
+  margin: 0; background-color: white; font-size: 11pt; border: 2px solid green; 
+  border-radius: 8px; width: 6em; }
+
+main nav li a:hover, main nav li a:active, main nav li a:focus
+{ position: relative; top: -4px; background-color: lightgreen; 
+  box-shadow: 0px 4px 4px rgba(0,0,16,0.25); color: darkgreen; }
+
+section
+{ margin: 0 -0.5em 2em -0.5em; padding: 0 1em 1em 1em; 
+  background-color: rgb(220,220,220); border-radius: 8px; }
+
+h1
+{ font-family: sen,verdana,sans-serif; font-size: 32pt; color: white; padding: 10px; 
+  margin: 0 auto; width: auto; background-color: green; border-bottom: 4px solid lightgrey; }
+
+h2
+{ font-family: sen,verdana,sans-serif; color: white; background-color: green; 
+  font-weight: bold; padding: 16px 1em; border-radius: 16px; 
+  box-shadow: 2px 4px 2px rgba(0,0,16,0.25); letter-spacing: 0.1em; font-size: 20pt; 
+  margin: 0.7em -1em 0.7em -1em; }
+
+h3
+{ font-family: sen,verdana,sans-serif; color: darkgreen; font-weight: bold; font-size: 16pt; 
+  text-shadow: 1px 2px 2px rgba(0,0,16,0.1); }
+
+h4,h5,h6
+{ color: darkgreen; font-weight: bold; }
+
+a, a:visited
+{ color: darkgreen; text-decoration: underline; }
+
+a:hover, a:active, a:focus
+{ text-shadow: 1px 3px 2px rgba(0,0,16,0.25); /*limegreen; */
+  position: relative; top: -3px; left: 0px; color: green; }
+
+a:hover > img, a:active > img, a:focus > img
+{ position: relative; top: -4px; transform: rotate(-2deg) scale(1.05); }
+
+figure
+{ text-align: center; display: block; margin: 1em auto; padding: 0; }
+
+code, code pre
+{ font-family: hack,monospace; }
+
+figure code
+{ display: inline-block; text-align: left; padding: 0.5em 1em;
+  background-color: darkolivegreen; color: white; }
+
+figure code span
+{ font-weight: bold; color: darkblue; }
+
+figure code span.s
+{ font-weight: normal; color: yellow; }
+
+figcaption
+{ font-size: 11pt; font-style: italic; }
+
+.with-left-img
+{ text-align: left; }
+
+.with-right-img
+{ text-align: right; }
+
+.with-left-img::after, .with-right-img::after
+{ content: ""; clear: both; display: block; }
+
+.with-left-img img
+{ float: left; margin: 0 1em 0 0; }
+
+.with-right-img img
+{ float: right; margin: 0 0 0 1em; }
+
+section.standout
+{ font-size: 130%; text-align: center; padding: 0.5em 1em; background-color: dimgray;
+  color: white; /*border: 4px solid green;*/ }
+
+img.icon
+{ width: 48px; height: 48px; }
+
+/* remove visual noice from abbreviations used for microformat semantic data */
+abbr[class*=" dt-"], abbr[class^="dt-"],
+abbr[class*=" p-"], abbr[class^="p-"],
+abbr[class*=" u-"], abbr[class^="u-"],
+abbr[class*=" h-"], abbr[class^="h-"]
+{ text-decoration: none; }
+
+footer
+{ font-size: 10pt; background-color: green; color: white; margin: 0; padding: 16px; 
+  text-align: center; 
+  text-shadow: 2px 4px 2px rgba(0,0,16,0.25); font-style: italic; width: auto; display: block; 
+  box-shadow: 0px 8px 8px inset rgba(0,0,16,0.25); }
+
+footer .icon
+{ margin: 0.25em; }
+
+div.hero /* home page banner */
+{ margin: 0; padding: 5% 8px; z-index: 0;
+  /* preserve 3d to make sure z-translations aren't flattened */
+  transform-style: preserve-3d; }
+
+div.hero::before /* parallax banner background */
+{ content: ""; background-image: url('images/group.jpg'); 
+  background-size: cover; background-position: center top;
+  box-shadow: 0px 0px 100px 30px inset rgba(0,128,0,1.0);
+  display: block; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%;
+  margin: 0; padding: 0; z-index: -1; opacity: 0.3;
+}
+
+.hero h1 /* home page title */
+{ display: block; width: 100%; margin: 0.25em auto; 
+  padding: 0px; text-align: center; 
+  font-size: 36pt; color: white; color: rgba(255,255,255,0.9); background: none; box-shadow: none;
+  text-shadow: 4px 8px 2px rgba(0,0,16,0.25); border: none; }
+
+.hero h1 + div /* subheading */
+{ font-size: 12pt; text-align: center; margin: 0 auto; padding: 0; 
+  width: 90%; font-style: italic; color: white; }
+
+.hero img.logo /* home page logo */
+{ height: 64px; display: block; text-align: center; 
+  margin: 0 auto; float: none; border: 4px solid white;
+  border-radius: 8px; }
+
+/* styles for more desktop-like screens */
+@media only screen and (min-width: 600px)
+{
+    #body-wrapper
+    { /* to make elements maintain their original top-right corner position when translated
+         on the Z axis, helping to prevent horizontal overflow which chrome insists on
+         adding a horizontal scrollbar for */
+      perspective: 1000px; 
+      perspective-origin: top right; }
+
+    .hero h1
+    { font-size: 48pt; }
+
+    .hero h1 + div
+    { font-size: 16pt; }
+
+    .hero img.logo
+    { height: 128px; }
+
+    h2
+    { font-size: 24pt; }
+
+    div.hero::before
+    { transform: scale(1.81) translateZ(-800px) translateY(20px);
+      transform-origin: top right; }
+}

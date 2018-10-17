@@ -1,0 +1,130 @@
+{% extends 'pynwapp/base.html' %}
+{% load static %}
+
+{% block head_title %}Python North West{% endblock %}
+
+{% block head %}
+<link rel="profile" href="http://microformats.org/profile/hcard"/>
+{% endblock %}
+
+{% block bodyattrs %}class="h-card vcard"{% endblock %}
+
+{% block header %}
+<div class="hero">
+  <img class="logo u-logo photo" src="{% static 'pynwapp/images/pynw-logo.png' %}" 
+       alt="Python North West logo" />
+  <h1 class="p-name fn org">Python North West</h1>
+  <div>A usergroup for the Python programming language in Manchester, UK</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<a href="#summary" title="Skip to content" class="reader-help">Skip to content</a>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#whatispython">Python?</a></li>
+        <li><a href="#talksandworkshops">Sessions</a></li>
+        <li><a href="#wheretofindus">Location</a></li>
+        <li><a href="#sourcecode">GitHub</a></li>
+    </ul>
+</nav>
+
+<section id="summary" class="standout h-event vevent">
+<p class="with-left-img">
+  <a href="https://www.meetup.com/Python-North-West-Meetup/events/ical/" 
+     title="PyNW Calendar Feed">
+  <img src="{% static 'pynwapp/images/calendar_s.png' %}" alt="Calendar icon" class="icon"/></a>
+  <strong><abbr class="dtstart dt-start" title="19:00">7pm</abbr></strong>
+  on <abbr class="p-rrule rrule" title="FREQ=MONTHLY;BYDAY=3TH">the <strong>third Thursday</strong> of every month</abbr> 
+  at <strong class="p-location location">MadLab</strong>!</p>
+</section>
+
+<section id="about">
+<h2><code>def python<wbr/>_north<wbr/>_west():</code></h2>
+<p>We are a group that meets monthly for talks, workshops and other fun stuff centered 
+   around the <em>Python</em> programming language.</p>
+<p>We welcome pythonistas of all ages and experience levels, so whether you're a 
+   professional developer, hobbyist, learner or simply curious about coding in general,
+   we aim to run sessions for everyone.<p>
+<p class="with-left-img">
+   <a href="https://www.meetup.com/Python-North-West-Meetup/" title="PyNW on Meetup.com">
+   <img src="{% static 'pynwapp/images/meetup.png' %}" alt="Meetup logo" />
+   </a> To find out more about our next meet-up, check out 
+   <a href="https://www.meetup.com/Python-North-West-Meetup/" title="PyNW on Meetup.com">
+   our group on meetup.com</a> where you can sign up to be notified, or alternatively
+   you can <a href="https://www.meetup.com/Python-North-West-Meetup/events/ical/" 
+   title="PyNW iCalendar Feed">subscribe directly to the calendar feed</a> in your favourite 
+   calendar app.</p>
+<p>We're also <a href="https://twitter.com/pythonnw">on Twitter as @pythonnw</a>
+   and we have a <a href="https://groups.google.com/forum/#!forum/python-north-west">mailing 
+   list on google groups</a>.</p>
+</section>
+
+<section id="whatispython">
+<h2>What is Python?</h2>
+<p class="with-left-img">
+   <img src="{% static 'pynwapp/images/python.png' %}" alt="Python logo" />
+   Python is the name of a computer programming language created by Guido van Rossum
+   in 1991. Today, Python's friendly syntax and pragmatic &quot;batteries-included&quot; 
+   standard library make it a popular choice for web applications, data science, and in
+   the classroom.</p>
+<figure>
+    <code><pre>&gt;&gt;&gt; <span>def</span> do_greeting<span>(</span>name<span>):</span>
+&gt;&gt;&gt;     <span>print(</span><span class="s">"Hello, "</span> <span>+</span> name <span>+</span> <span class="s">"!"</span><span>)</span>
+&gt;&gt;&gt; 
+&gt;&gt;&gt; do_greeting<span>(</span><span class="s">"world"</span><span>)</span>
+<span class="s">'Hello, world!'</span></pre></code>
+    <figcaption>Example Python code</figcaption>
+</figure>
+<p>To learn more, see <a href="https://python.org">python.org</a> or check out an online
+   tutorial at <a href="https://www.codecademy.com/learn/learn-python">codecademy.com</a>.</p>
+</section>
+
+<section id="talksandworkshops">
+<h2>Talks and Workshops</h2>
+<p>We host talks on a wide variety of Python-related topics. If there is a subject in particular
+   you would like to hear about, or if you would like to present a talk at one of our sessions, 
+   please <a href="https://twitter.com/pythonnw">contact us via Twitter</a>.</p>
+<p>We also run workshops from time to time, where folks can come along and get hands-on with some 
+   Python code. We recommend bringing along a laptop if you have one, and 
+   <a href="https://wiki.python.org/moin/BeginnersGuide/Download">installing Python</a> beforehand 
+   to get up and running smoothly. But if not, don't worry as there will be somebody there to pair up
+   with and/or lend a hand.</p>
+</section>
+
+<section id="wheretofindus" class="p-adr adr h-card vcard">
+<h2>Where to Find Us</h2>
+<p class="with-left-img">
+   <img src="{% static 'pynwapp/images/location.png' %}" alt="Location icon" />
+   Our group is hosted by the splendid arts and tech community space 
+   <em class="p-name fn org">MadLab</em>, which is located at 
+   <strong class="p-adr adr">
+   <span class="p-extended-address extended-address">Plant NOMA, Redfern</span>, 
+   <span class="p-street-address street-address">Dantzic Street</span>, 
+   <span class="p-locality locality">Manchester</span>, 
+   <span class="p-postal-code postal-code">M60&nbsp;0AE</span></strong> 
+   (close to Victoria station and Shudehill tram stop). Note: MadLab is no longer on Edge Street!</p>
+<figure>
+    <iframe style="border: 0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2373.977396410238!2d-2.2412246841562866!3d53.48673368000872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf44be30d14fbbf55!2sPlant+NOMA!5e0!3m2!1sen!2suk!4v1526304224268" 
+            width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    <figcaption>MadLab location</figcaption>
+</figure>
+<p>For more info about the space and the multitude of other local meet-ups and workshops that 
+   take place there, check out 
+   <a href="https://madlab.org.uk/" class="p-url url">madlab.org.uk</a>.</p>
+</section>
+
+<section id="sourcecode">
+<h2>Source Code</h2>
+<p class="with-left-img">
+   <a href="https://github.com/PythonNorthwestEngland" title="PyNW on GitHub">
+   <img src="{% static 'pynwapp/images/github.png' %}" alt="GitHub logo" /></a>
+   We have <a href="https://github.com/PythonNorthwestEngland">a group on GitHub</a> where we 
+   share code for workshops and community projects, including this website! Fixes and enhancements 
+   are welcome; feel free to <a href="https://help.github.com/articles/creating-a-pull-request/">send 
+   us a pull request</a>.</p>
+</section>
+{% endblock %}
+

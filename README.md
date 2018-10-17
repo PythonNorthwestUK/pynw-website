@@ -1,10 +1,43 @@
-Python Northwest Website
-========================
+Python North West Website
+=========================
 
-A website for _Python Northwest_, a usergroup for the Python programming
+                     \\\\
+          ,-.   ,-.  \\\\
+        .'   `.' O `. \\\
+      ,'       `.    `.`\
+      :    `.    `    ; \
+       `.    `.     ,' .\
+      ,:::._,:::._,:::. \
+      ::O:::::::::::::; \
+       `::::::;:::::;' .\
+    \\\\.`::;' `::;' .\\\
+    \\\\\\....\\....\\\\\
+
+A website for _Python North West_, a usergroup for the Python programming
 language based in Manchester, UK. We meet on the _third Thursday_ of every 
-month, 7pm at Mad Lab on Edge Street.
+month, 7pm at Madlab.
 
-This project uses __Django__ and requires __Python 3__. You will need to 
-create a `settings_secret.py` file in the `PYNWapp` directory. See 
-`settings_secret.py.template` for an example.
+
+Installation
+------------
+
+To set up the project for development, it is recommended that you create
+a [virtual environment] in which to work. 
+
+The project requires:
+
+* _Python 3.7_
+* _Django 2.1.2_ and the other dependencies as listed in the `requirements.txt` 
+  file (`pip install -r requirements.txt`)
+
+By default the project is configured for _production_, minus sensitive config
+which is not committed to version control. For your development environment
+you will need to:
+
+* Create a `settings_secret.py` file in the `pynwproj` directory (see 
+  `settings_secret.py.template` for an example)
+* Set the `DJANGO_DEVELOPMENT` environment variable, which will cause the 
+  settings in `settings_dev.py` to be imported and override those in the
+  production settings file.
+
+[virtual environment]: https://virtualenv.pypa.io/en/stable/

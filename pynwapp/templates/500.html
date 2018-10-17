@@ -1,0 +1,14 @@
+{% extends 'pynwapp/base.html' %}
+{% load static %}
+{% block head_title %}PyNW - Error{% endblock %}
+{% block title %}PyNW - Error{% endblock %}
+
+{% block content %}
+<section>
+<h2>500: Internal Server Error</h2>
+<p>Whoops, something has gone wrong on our side, most likely caused by a bug. Please 
+   accept our apologies and we will get it fixed as soon as we can.</p>
+<p><a href="{%url 'index' %}">Back to homepage</a></p>
+</section>
+{% endblock %}
+
