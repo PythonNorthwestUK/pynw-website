@@ -8,7 +8,7 @@ on the project.
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1','192.168.1.71']
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = False

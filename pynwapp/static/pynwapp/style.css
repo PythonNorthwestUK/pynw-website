@@ -19,7 +19,7 @@ html
 html,body 
 { margin: 0; padding: 0; font-family: verdana,sans-serif; height: 100vh;
   box-sizing: border-box; font-size: 12pt; 
-  background-color: green; color: black; }
+  background-color: #48a; color: black; }
 
 #body-wrapper
 { /* sits at the root of the body, fits the size of the viewport and provides its own 
@@ -36,26 +36,26 @@ header a, header a:visited, footer a, footer a:visited
 { text-decoration: underline; color: white; }
 
 header a:hover, header a:active, header a:focus, footer a:hover, footer a:active, footer a:focus
-{ position: inherit; color: lightgreen; }
+{ position: inherit; color: #fd1; }
 
 header nav
-{ display: block; background-color: rgb(0,64,0); margin: 0; padding: 0; font-size: 12pt; 
+{ display: block; background-color: #004; margin: 0; padding: 0; font-size: 12pt; 
   box-shadow: 0px 4px 12px 8px inset rgba(0,0,16,0.25); 
   transform-style: preserve-3d; z-index: 1;
-  border-bottom: 4px solid green; }
+  border-bottom: 4px solid #48a; }
 
 header nav a, nav a:visited, nav li.current a
 { color: white; text-decoration: none; display: inline-block; margin: 0.2em 0px 0px 0px; 
   padding: 0.8em 2em; vertical-align: bottom; position: relative; height: 1em; }
 
 header nav a:hover, header nav a:active, header nav a:focus
-{ color: yellow; margin-top: 0px; height: 1.2em; }
+{ color: #faa; margin-top: 0px; height: 1.2em; }
 
 header nav li a
-{ border-radius: 16px 16px 0px 0px; background-color: rgb(0,96,0); }
+{ border-radius: 16px 16px 0px 0px; background-color: #00a }
 
 header nav li.current a
-{ border-radius: 16px 16px 0px 0px; background-color: green; }
+{ border-radius: 16px 16px 0px 0px; background-color: #48a; }
 
 header nav ul
 { margin: 0; padding: 0; width: auto; text-align: center; }
@@ -85,7 +85,7 @@ main
 { top: 0px; left: 0px; }
 
 main nav
-{ display: block; padding: 0; margin: 0 0 16px 0; background-color: green; 
+{ display: block; padding: 0; margin: 0 0 16px 0; background-color: #48a; 
   width: auto; border-radius: 32px 32px 4px 4px; font-size: 0pt; }
 
 main nav ul
@@ -96,41 +96,41 @@ main nav li
 
 main nav li a, main nav li a:hover, main nav li a:focus, main nav li a:visited, main nav li a:active
 { text-decoration: none; position: inherit; text-shadow: none; 
-  color: green; font-weight: bold; display: inline-block; padding: 0.5em; 
-  margin: 0; background-color: white; font-size: 11pt; border: 2px solid green; 
+  color: #48a; font-weight: bold; display: inline-block; padding: 0.5em; 
+  margin: 0; background-color: white; font-size: 11pt; border: 2px solid #48a; 
   border-radius: 8px; width: 6em; }
 
 main nav li a:hover, main nav li a:active, main nav li a:focus
-{ position: relative; top: -4px; background-color: lightgreen; 
-  box-shadow: 0px 4px 4px rgba(0,0,16,0.25); color: darkgreen; }
+{ position: relative; top: -0.25em; padding-bottom: 0.75em; margin-bottom: -0.25em; 
+  background-color: #fd1; color: #00f; }
 
 section
 { margin: 0 -0.5em 2em -0.5em; padding: 0 1em 1em 1em; 
-  background-color: rgb(220,220,220); border-radius: 8px; }
+  background-color: #ddd; border-radius: 8px; }
 
 h1
 { font-family: sen,verdana,sans-serif; font-size: 32pt; color: white; padding: 10px; 
-  margin: 0 auto; width: auto; background-color: green; border-bottom: 4px solid lightgrey; }
+  margin: 0 auto; width: auto; background-color: #48a; border-bottom: 4px solid lightgrey; }
 
 h2
-{ font-family: sen,verdana,sans-serif; color: white; background-color: green; 
+{ font-family: sen,verdana,sans-serif; color: white; background-color: #48a; 
   font-weight: bold; padding: 16px 1em; border-radius: 16px; 
   box-shadow: 2px 4px 2px rgba(0,0,16,0.25); letter-spacing: 0.1em; font-size: 20pt; 
   margin: 0.7em -1em 0.7em -1em; }
 
 h3
-{ font-family: sen,verdana,sans-serif; color: darkgreen; font-weight: bold; font-size: 16pt; 
+{ font-family: sen,verdana,sans-serif; color: #44f; font-weight: bold; font-size: 16pt; 
   text-shadow: 1px 2px 2px rgba(0,0,16,0.1); }
 
 h4,h5,h6
-{ color: darkgreen; font-weight: bold; }
+{ color: #44f; font-weight: bold; }
 
 a, a:visited
-{ color: darkgreen; text-decoration: underline; }
+{ color: #44f; text-decoration: underline; }
 
 a:hover, a:active, a:focus
-{ text-shadow: 1px 3px 2px rgba(0,0,16,0.25); /*limegreen; */
-  position: relative; top: -3px; left: 0px; color: green; }
+{ text-shadow: 1px 3px 2px rgba(0,0,16,0.25);
+  position: relative; top: -3px; left: 0px; color: #00f; padding-bottom: 3px; }
 
 a:hover > img, a:active > img, a:focus > img
 { position: relative; top: -4px; transform: rotate(-2deg) scale(1.05); }
@@ -143,13 +143,13 @@ code, code pre
 
 figure code
 { display: inline-block; text-align: left; padding: 0.5em 1em;
-  background-color: darkolivegreen; color: white; }
+  background-color: #345; color: white; }
 
 figure code span
-{ font-weight: bold; color: darkblue; }
+{ font-weight: bold; color: #69e; }
 
 figure code span.s
-{ font-weight: normal; color: yellow; }
+{ font-weight: normal; color: #fd1; }
 
 figcaption
 { font-size: 11pt; font-style: italic; }
@@ -184,7 +184,7 @@ abbr[class*=" h-"], abbr[class^="h-"]
 { text-decoration: none; }
 
 footer
-{ font-size: 10pt; background-color: green; color: white; margin: 0; padding: 16px; 
+{ font-size: 10pt; background-color: #48a; color: white; margin: 0; padding: 16px; 
   text-align: center; 
   text-shadow: 2px 4px 2px rgba(0,0,16,0.25); font-style: italic; width: auto; display: block; 
   box-shadow: 0px 8px 8px inset rgba(0,0,16,0.25); }
@@ -200,7 +200,7 @@ div.hero /* home page banner */
 div.hero::before /* parallax banner background */
 { content: ""; background-image: url('images/group.jpg'); 
   background-size: cover; background-position: center top;
-  box-shadow: 0px 0px 100px 30px inset rgba(0,128,0,1.0);
+  box-shadow: 0px 0px 100px 30px inset #48a;
   display: block; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%;
   margin: 0; padding: 0; z-index: -1; opacity: 0.3;
 }
@@ -208,7 +208,7 @@ div.hero::before /* parallax banner background */
 .hero h1 /* home page title */
 { display: block; width: 100%; margin: 0.25em auto; 
   padding: 0px; text-align: center; 
-  font-size: 36pt; color: white; color: rgba(255,255,255,0.9); background: none; box-shadow: none;
+  font-size: 36pt; color: white; background: none; box-shadow: none;
   text-shadow: 4px 8px 2px rgba(0,0,16,0.25); border: none; }
 
 .hero h1 + div /* subheading */
