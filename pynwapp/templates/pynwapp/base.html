@@ -9,12 +9,12 @@
     <meta name="twitter:site" content="@pythonnw"/>
     <meta name="twitter:title" content="Python North West"/>
     <meta name="twitter:description" content="A usergroup for the Python programming language in Manchester, UK"/>
-    <meta name="twitter:image" content="{% static 'pynwapp/images/pynw-logo.png' %}"/>
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'pynwapp/images/pynw-logo.png' %}"/>
     <meta name="twitter:image:alt" content="Python North West logo"/>
     <meta property="og:title" content="Python North West"/>
     <meta property="og:description" content="A usergroup for the Python programming language in Manchester, UK"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:image" content="{% static 'pynwapp/images/pynw-logo.png' %}"/>
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'pynwapp/images/pynw-logo.png' %}"/>
     <meta property="og:image:alt" content="Python North West logo"/>
     <link rel="stylesheet" href="{% static 'pynwapp/style.css' %}"/>
     {# HTML5Shiv allowing styling of html5 elements in IE < 9 #}
@@ -62,10 +62,11 @@
              <img src="{% static 'pynwapp/images/location_s.png' %}" title="Location icon" class="icon" /></a>
            <a href="https://www.meetup.com/Python-North-West-Meetup/events/ical/" alt="PyNW calendar feed">
              <img src="{% static 'pynwapp/images/calendar_s.png' %}" title="Calendar icon" class="icon"/></a></p>
-        <p>Copyright &copy; 2018 Python North West<br/>
+        <p>Copyright &copy; 2018 Python North West.<br/>
            Social media icons by 
            <a href="https://www.iconfinder.com/popcornarts" title="PopcornArts">PopcornArts</a> and 
-           <a href="https://www.graphicsfuel.com" title="GraphicsFuel">GraphicsFuel</a></p>
+           <a href="https://www.graphicsfuel.com" title="GraphicsFuel">GraphicsFuel</a>.
+           Header photo by <a href="https://lwyso.wordpress.com/">Leona So, used with permission</a></p>
         {% comment %}
         <p><a href="https://www.djangoproject.com" title="Django">
            <img src="{% static 'pynwapp/images/django.gif' %}" alt="Made with Django" 
