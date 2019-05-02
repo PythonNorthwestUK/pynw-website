@@ -45,6 +45,7 @@ var/
 .installed.cfg
 *.egg
 assets/ # The directory set as STATIC_ROOT where Apache creates new static files on live web servers.
+/static
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

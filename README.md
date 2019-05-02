@@ -15,7 +15,7 @@ Python North West Website
 
 A website for _Python North West_, a usergroup for the Python programming
 language based in Manchester, UK. We meet on the _third Thursday_ of every 
-month, 7pm at Madlab.
+month, _7pm_ at _The Federation_.
 
 
 Installation
@@ -26,8 +26,8 @@ a [virtual environment] in which to work.
 
 The project requires:
 
-* _Python 3.7_
-* _Django 2.1.2_ and the other dependencies as listed in the `requirements.txt` 
+* _Python 3.6_
+* _Django 2.x.x_ and the other dependencies as listed in the `requirements.txt` 
   file (`pip install -r requirements.txt`)
 
 By default the project is configured for _production_, minus sensitive config

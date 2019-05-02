@@ -179,7 +179,7 @@ section.standout a
 img.icon
 { width: 48px; height: 48px; }
 
-/* remove visual noice from abbreviations used for microformat semantic data */
+/* remove visual noise from abbreviations used for microformat semantic data */
 abbr[class*=" dt-"], abbr[class^="dt-"],
 abbr[class*=" p-"], abbr[class^="p-"],
 abbr[class*=" u-"], abbr[class^="u-"],
