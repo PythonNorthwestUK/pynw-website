@@ -26,7 +26,7 @@ a [virtual environment] in which to work.
 
 The project requires:
 
-* _Python 3.7_
+* _Python 3.6_
 * _Django 2.x.x_ and the other dependencies as listed in the `requirements.txt` 
   file (`pip install -r requirements.txt`)
 
